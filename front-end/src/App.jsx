@@ -1,13 +1,13 @@
 import React from 'react'
-
+import BalanceTable from './Components/BalanceTable'
 import './App.css'
 
 function App() {
 
   return (
-    <>
-      <h1>asdjklñ</h1>
-    </>
+    <div>
+      <BalanceTable/>
+    </div>    
   )
 }
 

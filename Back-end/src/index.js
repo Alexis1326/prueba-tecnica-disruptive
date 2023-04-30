@@ -26,9 +26,11 @@ app.get('/ganancia/:cripto/:cantidad/:anios', async (req, res) => {
       const ganancia = inversion * (1 + retornoMensual) ** (anios * 12);
       const gananciaTotal = ganancia * price - cantidad;
   
-      res.send(`Invertiste ${cantidad}$ en ${cripto}. Después de ${anios} años, tendrás ${gananciaTotal.toFixed(2)}$ (una ganancia del ${((gananciaTotal / cantidad) * 100).toFixed(2)}%).`);
+      res.send(`${gananciaTotal.toFixed(2)}`);
     } catch (error) {
       console.error(error);
       res.send(`Hubo un error al obtener el valor de ${cripto}.`);
     }
   });
+
+  
