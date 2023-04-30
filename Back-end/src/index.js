@@ -18,10 +18,10 @@ app.get('/ganancia/:cripto/:cantidad/:anios', async (req, res) => {
       const price = response.data.data.market_data.price_usd;
       const inversion = cantidad / price;
       const retornosMensuales = {
-        bitcoin: 0.05,
-        ethereum: 0.042,
-        cardano: 0.01,
-      };
+        BTC: 0.05,
+        ETH: 0.042,
+        ADA: 0.01,
+      };      
       const retornoMensual = retornosMensuales[cripto.toLowerCase()];
       const ganancia = inversion * (1 + retornoMensual) ** (anios * 12);
       const gananciaTotal = ganancia * price - cantidad;

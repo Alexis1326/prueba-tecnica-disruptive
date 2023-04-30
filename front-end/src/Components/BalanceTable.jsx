@@ -85,8 +85,8 @@ function BalanceTable() {
     a.click();
   }
 
-  return (
-    <div className="flex justify-center">
+  return(
+    <div className="flex justify-center" style={{backgroundImage: `url('https://s10.s3c.es/imag/_v0/770x420/9/8/b/cripto-dogecoin-bitcoin.jpg')`}}>
       <div className="table-responsive">
         <table className="w-full bg-gray-900 border-collapse border-2 border-blue-900 rounded-xl overflow-hidden text-white">
           <thead className="text-gray-200">
